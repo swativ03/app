@@ -1,0 +1,78 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Welcome to the Company Webpage</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        /* Add CSS styles for the layout */
+        body {
+            background-image: url("{{ url_for('static', filename='background.jpeg') }}");
+            background-size: 100% 50vh;
+            background-position: center top;
+            background-repeat: no-repeat;
+            position: relative;
+        }
+
+        #header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+
+        #logo {
+            display: block;
+            width: 100px; /* Adjust the size as needed */
+        }
+
+        #nav {
+            display: flex;
+        }
+
+        #nav a {
+            text-decoration: none;
+            color: white;
+            margin: 0 20px; /* Adjust the spacing as needed */
+        }
+        #content {
+            background: rgba(255, 255, 255, 0.7);
+            padding: 20px;
+            text-align: center;
+            margin-top: 50vh; /* Add this to create space below the background image */
+        }
+        #title {
+            position: absolute;
+            top: 200px; /* Adjust the top position as needed */
+            left: 100px; /* Adjust the left position as needed */
+            font-size: 32px; /* Adjust the font size as needed */
+            color: white; /* Text color */
+    </style>
+</head>
+
+<body>
+    <div id="header">
+        <img id="logo" src="{{ url_for('static', filename='company_logo.jpeg') }}" alt="Company Logo">
+        <div id="nav">
+            <a href="#">About</a>
+            <a href="#">Contact Us</a>
+            <a href="{{ url_for('login') }}">Login</a>
+        </div>
+    </div>
+    
+    <div id="title">Welcome to the Company Webpage</div>
+    
+    <div id="content">
+        Welcome to the company ....<br>
+        
+        Login with your user id and password. <br>
+        Enter the cut off date as of which forecast is required
+        Click submit to see the forecasted results
+    </div>
+    
+
+</body>
+
+</html>

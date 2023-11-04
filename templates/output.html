@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Forecast Result</title>
+    <style>
+        /* Center the content both horizontally and vertically */
+        .center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* This centers vertically in the viewport */
+        }
+    </style>
+</head>
+<body>
+    <h1>Forecast Plot</h1>
+
+    <!-- Center the image using the .center class -->
+    <div class="center">
+        <img src="{{ url_for('static', filename=image_filename) }}" alt="Forecast result">
+    </div>
+    <a href="{{ url_for('index') }}">Back</a>
+</body>
+</html>
+

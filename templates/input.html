@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Input Page</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        /* Add CSS styles for centering the form */
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        form {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <form method="POST" action="/submit">
+        <label for="date">Enter Date for forecasting: </label>
+        <input type="date" name="date" id="date" required>
+        <button type="submit">Submit</button>
+    </form>
+    <a href="{{ url_for('index') }}">Back</a>
+</body>
+</html>
